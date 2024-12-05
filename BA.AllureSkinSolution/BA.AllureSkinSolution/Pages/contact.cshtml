@@ -1,0 +1,188 @@
+﻿@page "/contact"
+@using Microsoft.Extensions.Options
+@using reCAPTCHA.AspNetCore
+@model BA.AllureSkinsolution.contactModel
+@inject IOptions<RecaptchaSettings> RecaptchaSettings
+@section Metatags {
+    <title>Contact @@ Allure Skin Solutions and Medical Aesthetics</title>
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+    <link rel="canonical" href="https://allureskinsolution.com/contact" />
+    <meta property="og:site_name" content="Allure Skin Solutions and Medical Aesthetics" />
+    <meta property="og:title" content="Contact @@ Allure Skin Solutions and Medical Aesthetics" />
+    <meta property="og:url" content="https://allureskinsolution.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Contact Allure Skin solutions for any questions regarding products, skin care services, or treatments. CALL: (208) 939-9074" />
+    <meta property="og:image" content="/images/allure-logo.png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="90" />
+    <meta itemprop="name" content="Allure Skin Solutions" />
+    <meta itemprop="url" content="https://allureskinsolution.com/contact" />
+    <meta itemprop="description" content="Contact Allure Skin solutions for any questions regarding products, skin care services, or treatments. CALL: (208) 939-9074" />
+    <meta itemprop="thumbnailUrl" content="/images/allure-logo.png" />
+    <link rel="image_src" href="/images/allure-logo.png" />
+    <meta itemprop="image" content="/images/allure-logo.png" />
+    <meta name="twitter:title" content="Contact @@ Allure Skin Solutions and Medical Aesthetics" />
+    <meta name="twitter:image" content="/images/allure-logo.png" />
+    <meta name="twitter:url" content="https://allureskinsolution.com/contact" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="Contact Allure Skin solutions for any questions regarding products, skin care services, or treatments. CALL: (208) 939-9074" />
+    <meta name="description" content="Contact Allure Skin solutions for any questions regarding products, skin care services, or treatments. CALL: (208) 939-9074" />
+}
+@section Schema {
+    <script type="application/ld+json">
+        [
+        {
+        "@@context": "http://schema.org",
+        "@@type": "WebPage",
+        "name": "Contact | Eagle, ID | Allure Skin Solutions and Medical Aesthetics",
+        "description": "Contact Allure Skin solutions for any questions regarding products, skin care services, or treatments. CALL: (208) 939-9074",
+        "publisher": {
+        "@@type": "Person",
+        "name": "Tonia Nicholson" }
+        },
+        {
+        "@@context": "https://schema.org/",
+        "@@type": "BreadcrumbList",
+        "itemListElement": [{
+        "@@type": "ListItem",
+        "position": 1,
+        "name": "Allure Skin Solutions and Medical Aesthetics",
+        "item": "https://allureskinsolution.com"
+        },
+        {
+        "@@type": "ListItem",
+        "position": 2,
+        "name": "Contact | Eagle, ID | Allure Skin Solutions and Medical Aesthetics",
+        "item": "https://allureskinsolution.com/contact"
+        }]
+        }
+        ]
+    </script>
+}
+<main class="main-content">
+    <section class="banner-area girlface-banner d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="inner-caption text-left text-uppercase">
+                        <h1>Contact Us</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-area">
+        <div class="content-header py-120 text-left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg">
+                        <h3 class="contact-head clock-head">Hours</h3>
+                        <div class="row border-bottom pt-4 pb-5  ">
+                            <div class="col-sm">
+                                <h5 class="small-head">LICENSED ESTHETICIANS</h5>
+                                <p>1st & 3rd Tues : 10 - 4</p>
+                                <p>Weds - Fri : 10 - 4</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5 class="small-head">MEDICAL AESTHETICS</h5>
+                                <p>By Appointment </p>
+                            </div>
+                        </div>
+                        <h3 class="mt-5 mb-5 contact-head mail-head">Contact</h3>
+                        <div class="row">
+                            <div class="col-sm">
+                                <h5 class="small-head">MEET US </h5>
+                                <p>7950 Horseshoe Bend Rd.</p>
+                                <p>Suite 105, Eagle, ID 83714</p>
+                            </div>
+                            <div class="col-sm">
+                                <h5 class="small-head">Call US </h5>
+                                <p>(208) 939-9074</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg pt-5 pt-lg-0">
+                        <div class="request-form">
+                            <form id="contact-form">
+                                <div class="name-fields">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <label for="Name">Name</label>
+                                            <input name="Name" type="text" />
+                                        </div>
+                                        <div class="col-sm">
+                                            <label for="Email">Email Address</label>
+                                            <input name="Email" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <label for="Phone">Phone</label>
+                                            <input name="Phone" />
+                                        </div>
+                                        <div class="col-sm">
+                                            <label for="Referral">How did you hear about us?</label>
+                                            <input name="Referral" type="text" />
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="Comments">Message</label>
+                                            <textarea name="Comments" rows="10" class="w-100 form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col mt-4">
+                                            <input id="recaptcha" type="submit" value="Submit" class="btn btn-primary">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            @using (@Html.BeginForm(null, null, FormMethod.Post, new { id = "contact-us", @class = "contact" }))
+                            {
+                                @Html.ValidationSummary(true);
+                                <div class="name-fields">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <label for="Name">Full Name</label>
+                                            <input asp-for="contactUsModel.ZEq6Upn5d6" type="text" data-val-required="Name is a Required Field" class="form-control" placeholder="" />
+                                            <span asp-validation-for="contactUsModel.ZEq6Upn5d6"></span>
+                                        </div>
+                                        <div class="col-sm">
+                                            <label for="Email">Email Address</label>
+                                            <input asp-for="contactUsModel.Y9xItYxUUA" type="text" data-val-required="Email is a Required Field" class="form-control" placeholder="" />
+                                            <span asp-validation-for="contactUsModel.Y9xItYxUUA"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <label for="Phone">Phone</label>
+                                            <input asp-for="contactUsModel.K7pmWqXbaV" type="text" data-val-required="Phone is a Required Field" class="form-control" placeholder="" />
+                                        </div>
+                                        <div class="col-sm">
+                                            <label for="Referral">How did you hear about us?</label>
+                                            <input asp-for="contactUsModel.kxCJgcNxcc" type="text" class="form-control" placeholder="" />
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="Comments">Message</label>
+                                            <textarea asp-for="contactUsModel.ZPqL6w6Ao3" rows="10" class="w-100 form-control"></textarea>
+                                            <span asp-validation-for="contactUsModel.ZPqL6w6Ao3"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            @Html.Recaptcha(RecaptchaSettings?.Value)
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col mt-4">
+                                            <input id="recaptcha" type="submit" value="Submit" class="btn btn-primary">
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

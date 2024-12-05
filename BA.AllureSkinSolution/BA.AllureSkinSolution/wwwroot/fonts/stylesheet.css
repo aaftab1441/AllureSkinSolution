@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'leonsanslight';
+    src: url('leonsans-light-webfont.woff2') format('woff2'),
+         url('leonsans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'leonsansbold';
+    src: url('leonsans-bold-webfont.woff2') format('woff2'),
+         url('leonsans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'leonsansmedium';
+    src: url('leonsans-medium-webfont.woff2') format('woff2'),
+         url('leonsans-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'leonsansregular';
+    src: url('leonsans-regular-webfont.woff2') format('woff2'),
+         url('leonsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'leonsansthin';
+    src: url('leonsans-thin-webfont.woff2') format('woff2'),
+         url('leonsans-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
